@@ -1,0 +1,24 @@
+{
+  "name": "samjohnreid.com",
+  "version": "1.0.0",
+  "description": "Portfolio for front-end web developer Sam John Reid",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samjohnreid/samjohnreid.com.git"
+  },
+  "author": "Sam John Reid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samjohnreid/samjohnreid.com/issues"
+  },
+  "homepage": "https://github.com/samjohnreid/samjohnreid.com#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
