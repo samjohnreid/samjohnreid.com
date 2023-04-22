@@ -1,6 +1,20 @@
 @import "reset";
+@import "variables";
 @import "fonts";
+@import "mixins";
 
-div {
-    border: 20px dashed salmon;
+body {
+    @include bg-pattern('#dde0e3');
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Poppins-SemiBold;
+    margin: 100px;
+    color: var(--hi-sab);
+
+    span {
+        color: var(--highlight-color);
+        font-family: Poppins-Bold;
+    }
 }

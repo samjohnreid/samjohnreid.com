@@ -45,6 +45,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+:root {
+  --highlight-color: #e66e49;
+  --my-name: 'Sam John Reid'; }
+
 @font-face {
   font-family: 'Poppins-Bold';
   src: url("/fonts/poppins-bold.woff2") format("woff2"), url("/fonts/poppins-bold.woff") format("woff");
@@ -60,5 +64,15 @@ table {
   src: url("/fonts/poppins-semibold.woff2") format("woff2"), url("/fonts/poppins-semibold.woff") format("woff");
   font-display: swap; }
 
-div {
-  border: 20px dashed salmon; }
+body {
+  background-image: linear-gradient(45deg, transparent 42.86%, 42.86%, #dde0e3 50%, transparent 50%, transparent 92.86%, #dde0e3 92.86%, #dde0e3 100%);
+  background-size: 9.90px 9.90px; }
+
+h1 {
+  font-size: 100px;
+  font-family: Poppins-SemiBold;
+  margin: 100px;
+  color: var(--hi-sab); }
+  h1 span {
+    color: var(--highlight-color);
+    font-family: Poppins-Bold; }
