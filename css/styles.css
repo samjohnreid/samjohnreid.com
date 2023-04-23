@@ -114,7 +114,8 @@ body {
   background-color: var(--color-white);
   margin: 0 auto;
   max-width: var(--content-width);
-  padding: 50px 50px 450px; }
+  padding: 50px 50px 650px;
+  position: relative; }
 
 h2 {
   font-size: clamp(2.6rem, calc(4vw + 1rem), 10rem);
@@ -123,9 +124,13 @@ h2 {
     color: var(--color-primary);
     font-family: Poppins-Bold; }
 
+.reid-family-illustration {
+  position: absolute;
+  right: 0;
+  top: -12rem; }
+
 .polaroid-wrapper {
-  transform: scale(0.8, 0.8) rotate(5deg);
-  width: 30%; }
+  transform: scale(0.8, 0.8) rotate(5deg); }
 
 .polaroid {
   background: #fff;
