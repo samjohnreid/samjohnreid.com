@@ -5,16 +5,38 @@
 
 body {
     @include bg-pattern('#dde0e3');
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
 }
 
 h1 {
     font-size: 100px;
     font-family: Poppins-SemiBold;
-    margin: 100px;
+    margin: 100px 100px 100px 100px;
     color: var(--hi-sab);
 
     span {
-        color: var(--highlight-color);
+        color: var(--color-orange);
         font-family: Poppins-Bold;
     }
+}
+
+.city-skylines {
+    display: flex;
+    justify-content: center;
+
+    .city-skyline {
+        width: 400px;
+    
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+
+.footer {
+    background: var(--color-blue);
+    flex-grow: 1;
 }

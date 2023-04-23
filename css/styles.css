@@ -46,7 +46,8 @@ table {
   border-spacing: 0; }
 
 :root {
-  --highlight-color: #e66e49;
+  --color-orange: #e66e49;
+  --color-blue: #072c40;
   --my-name: 'Sam John Reid'; }
 
 @font-face {
@@ -66,13 +67,29 @@ table {
 
 body {
   background-image: linear-gradient(45deg, transparent 42.86%, 42.86%, #dde0e3 50%, transparent 50%, transparent 92.86%, #dde0e3 92.86%, #dde0e3 100%);
-  background-size: 9.90px 9.90px; }
+  background-size: 9.90px 9.90px;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh; }
 
 h1 {
   font-size: 100px;
   font-family: Poppins-SemiBold;
-  margin: 100px;
+  margin: 100px 100px 100px 100px;
   color: var(--hi-sab); }
   h1 span {
-    color: var(--highlight-color);
+    color: var(--color-orange);
     font-family: Poppins-Bold; }
+
+.city-skylines {
+  display: flex;
+  justify-content: center; }
+  .city-skylines .city-skyline {
+    width: 400px; }
+    .city-skylines .city-skyline img {
+      display: block;
+      max-width: 100%; }
+
+.footer {
+  background: var(--color-blue);
+  flex-grow: 1; }
