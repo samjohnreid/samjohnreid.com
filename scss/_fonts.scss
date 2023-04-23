@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Poppins-Bold';
     src:
-        url('/fonts/poppins-bold.woff2') format('woff2'),
-        url('/fonts/poppins-bold.woff') format('woff')
+        url('../fonts/poppins-bold.woff2') format('woff2'),
+        url('../fonts/poppins-bold.woff') format('woff')
     ;
     font-display: swap;
 }
@@ -10,8 +10,8 @@
 @font-face {
     font-family: 'Poppins-Light';
     src:
-        url('/fonts/poppins-light.woff2') format('woff2'),
-        url('/fonts/poppins-light.woff') format('woff')
+        url('../fonts/poppins-light.woff2') format('woff2'),
+        url('../fonts/poppins-light.woff') format('woff')
     ;
     font-display: swap;
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: 'Poppins-SemiBold';
     src:
-        url('/fonts/poppins-semibold.woff2') format('woff2'),
-        url('/fonts/poppins-semibold.woff') format('woff')
+        url('../fonts/poppins-semibold.woff2') format('woff2'),
+        url('../fonts/poppins-semibold.woff') format('woff')
     ;
     font-display: swap;
 }

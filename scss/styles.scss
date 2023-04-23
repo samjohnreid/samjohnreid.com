@@ -3,6 +3,10 @@
 @import "fonts";
 @import "mixins";
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     @include bg-pattern('#dde0e3');
     display: flex;
@@ -10,8 +14,12 @@ body {
     height: 100dvh;
 }
 
+main {
+    margin-bottom: 500px;
+}
+
 h1 {
-    font-size: 100px;
+    font-size: clamp(2.6rem, calc(4vw + 1rem), 10rem);
     font-family: Poppins-SemiBold;
     margin: 100px 100px 100px 100px;
     color: var(--hi-sab);
