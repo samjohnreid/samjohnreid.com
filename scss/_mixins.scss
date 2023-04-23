@@ -2,3 +2,32 @@
     background-image: linear-gradient(45deg, transparent 42.86%, 42.86%, #{$stripe-color} 50%, transparent 50%, transparent 92.86%, #{$stripe-color} 92.86%, #{$stripe-color} 100%);
     background-size: 9.90px 9.90px;
 }
+
+@mixin dashed-border($dash-color, $position: false) {
+    @if $position == 'top' {
+        background-image: repeating-linear-gradient(90deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 100% 2px;
+        background-position: 0 0;
+    } @else if $position == 'right' {
+        background-image: repeating-linear-gradient(180deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 2px 100%;
+        background-position: 100% 0;
+    } @else if $position == 'bottom' {
+        background-image: repeating-linear-gradient(270deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 100% 2px;
+        background-position: 0 100%;
+    } @else if $position == 'left' {
+        background-image: repeating-linear-gradient(0deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 2px 100%;
+        background-position: 0 0;
+    } @else if $position == 'vertical' {
+        background-image: repeating-linear-gradient(0deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px), repeating-linear-gradient(180deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 2px 100%, 2px 100%;
+        background-position: 0 0, 100% 0;
+    } @else {
+        background-image: repeating-linear-gradient(0deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px), repeating-linear-gradient(90deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px), repeating-linear-gradient(180deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px), repeating-linear-gradient(270deg, #{$dash-color}, #{$dash-color} 6px, transparent 6px, transparent 10px, #{$dash-color} 10px);
+        background-size: 2px 100%, 100% 2px, 2px 100% , 100% 2px;
+        background-position: 0 0, 0 0, 100% 0, 0 100%;
+    }
+    background-repeat: no-repeat;
+}

@@ -46,9 +46,14 @@ table {
   border-spacing: 0; }
 
 :root {
-  --color-orange: #e66e49;
   --color-blue: #072c40;
-  --my-name: 'Sam John Reid'; }
+  --color-blue-light: #7c9fb5;
+  --color-orange: #e66e49;
+  --color-white: #ffffff;
+  --content-width: 1200px;
+  --my-name: 'Sam John Reid';
+  --color-primary: var(--color-orange);
+  --color-secondary: var(--color-blue); }
 
 @font-face {
   font-family: 'Poppins-Bold';
@@ -73,23 +78,77 @@ body {
   background-size: 9.90px 9.90px;
   display: flex;
   flex-direction: column;
+  font-size: 1.6em;
   height: 100dvh; }
 
-main {
-  margin-bottom: 500px; }
+.header-wrapper {
+  background-image: repeating-linear-gradient(270deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px);
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-color: var(--color-white); }
 
-h1 {
+.header {
+  background-image: repeating-linear-gradient(0deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px), repeating-linear-gradient(180deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px);
+  background-size: 2px 100%, 2px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 50px; }
+  .header__logo {
+    color: var(--color-primary);
+    font-family: Poppins-Bold;
+    font-size: 1.8rem; }
+    .header__logo span {
+      font-family: Poppins-Light; }
+
+.main-wrapper {
+  position: relative; }
+
+.main {
+  background-image: repeating-linear-gradient(0deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px), repeating-linear-gradient(180deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px);
+  background-size: 2px 100%, 2px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-color: var(--color-white);
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 50px 50px 450px; }
+
+h2 {
   font-size: clamp(2.6rem, calc(4vw + 1rem), 10rem);
-  font-family: Poppins-SemiBold;
-  margin: 100px 100px 100px 100px;
-  color: var(--hi-sab); }
-  h1 span {
-    color: var(--color-orange);
+  font-family: Poppins-SemiBold; }
+  h2 span {
+    color: var(--color-primary);
     font-family: Poppins-Bold; }
 
+.polaroid-wrapper {
+  transform: scale(0.8, 0.8) rotate(5deg);
+  width: 30%; }
+
+.polaroid {
+  background: #fff;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  padding: 1.5rem; }
+  .polaroid img {
+    max-width: 100%; }
+  .polaroid::before {
+    content: '';
+    bottom: 30px;
+    box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+    height: 20%;
+    position: absolute;
+    right: 12px;
+    width: 47%;
+    z-index: -1; }
+
 .city-skylines {
+  bottom: 0;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: absolute;
+  width: 100vw; }
   .city-skylines .city-skyline {
     width: 400px; }
     .city-skylines .city-skyline img {
@@ -97,5 +156,8 @@ h1 {
       max-width: 100%; }
 
 .footer {
-  background: var(--color-blue);
+  background: var(--color-secondary);
   flex-grow: 1; }
+  .footer small {
+    display: block;
+    height: 300px; }

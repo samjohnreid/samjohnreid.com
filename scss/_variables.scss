@@ -1,5 +1,11 @@
 :root {
-    --color-orange: #e66e49;
     --color-blue: #072c40;
+    --color-blue-light: #7c9fb5;
+    --color-orange: #e66e49;
+    --color-white: #ffffff;
+    --content-width: 1200px;
     --my-name: 'Sam John Reid';
+
+    --color-primary: var(--color-orange);
+    --color-secondary: var(--color-blue);
 }

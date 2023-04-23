@@ -11,28 +11,86 @@ body {
     @include bg-pattern('#dde0e3');
     display: flex;
     flex-direction: column;
+    font-size: 1.6em;
     height: 100dvh;
 }
 
-main {
-    margin-bottom: 500px;
+.header-wrapper {
+    @include dashed-border('#7c9fb5', 'bottom');
+    background-color: var(--color-white);
 }
 
-h1 {
+.header {
+    @include dashed-border('#7c9fb5', 'vertical');
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 50px;
+
+    &__logo {
+        color: var(--color-primary);
+        font-family: Poppins-Bold;
+        font-size: 1.8rem;
+
+        span {
+            font-family: Poppins-Light;
+        }
+    }
+}
+
+.main-wrapper {
+    position: relative;
+}
+
+.main {
+    @include dashed-border('#7c9fb5', 'vertical');
+    background-color: var(--color-white);
+    margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 50px 50px 450px;
+}
+
+h2 {
     font-size: clamp(2.6rem, calc(4vw + 1rem), 10rem);
     font-family: Poppins-SemiBold;
-    margin: 100px 100px 100px 100px;
-    color: var(--hi-sab);
 
     span {
-        color: var(--color-orange);
+        color: var(--color-primary);
         font-family: Poppins-Bold;
     }
 }
 
+.polaroid-wrapper {
+    transform: scale(0.8, 0.8) rotate(5deg);
+    width: 30%;
+}
+
+.polaroid {
+    background: #fff;
+    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+    padding: 1.5rem;
+
+    img {
+        max-width: 100%;
+    }
+    
+    &::before {
+        content: '';
+        bottom: 30px;
+        box-shadow: 0 2.1rem 2rem rgba(0,0,0,0.4);
+        height: 20%;
+        position: absolute;
+        right: 12px;
+        width: 47%;
+        z-index: -1;
+    }
+}
+
 .city-skylines {
+    bottom: 0;
     display: flex;
     justify-content: center;
+    position: absolute;
+    width: 100vw;
 
     .city-skyline {
         width: 400px;
@@ -45,6 +103,11 @@ h1 {
 }
 
 .footer {
-    background: var(--color-blue);
+    background: var(--color-secondary);
     flex-grow: 1;
+
+    small {
+        display: block;
+        height: 300px;
+    }
 }
