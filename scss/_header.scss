@@ -1,0 +1,102 @@
+.header-wrapper {
+    @include dashed-border('#7c9fb5', 'bottom');
+    background-color: var(--color-white);
+}
+
+.header {
+    @include dashed-border('#7c9fb5', 'vertical');
+    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+    max-width: var(--content-width);
+    padding: 50px;
+
+    &__logo {
+        color: var(--color-primary);
+        font-family: Poppins-Bold;
+        font-size: 1.8rem;
+
+        span {
+            font-family: var(--font-poppins-light);
+        }
+    }
+
+	&__nav-main {
+		display: flex;
+		column-gap: 10px;
+		font-family: var(--font-poppins-semibold);
+	}
+
+	&__nav-main-link {
+
+		a {
+			background: var(--color-blue-light);
+			color: var(--color-white);
+			display: inline-block;
+			padding: 10px 15px 6px;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: background 0.5s;
+
+			&:hover {
+				background: var(--color-orange);
+			}
+		}
+
+		&--active {
+
+			a {
+				background: var(--color-orange);
+			}
+		}
+	}
+
+	&__nav-aux-link {
+
+		&--github {
+			
+			svg {
+				color: var(--color-blue-light);
+				height: 50px;
+				width: 50px;
+			}
+
+			&:hover {
+
+				svg {
+					color: var(--color-orange);
+				}
+			}
+		}
+
+		&--linkedin {
+			
+			svg {
+				color: var(--color-blue-light);
+				height: 50px;
+				width: 50px;
+			}
+		}
+		
+		&--letterboxd {
+
+			ellipse {
+				fill: var(--color-orange);
+			}
+		}
+
+		&--email {
+			
+			svg {
+				color: var(--color-blue-light);
+				height: 50px;
+				width: 50px;
+			}
+		}
+	}
+
+	&__nav-aux {
+		display: flex;
+	}
+}

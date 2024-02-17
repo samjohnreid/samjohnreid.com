@@ -53,7 +53,10 @@ table {
   --content-width: 1200px;
   --my-name: 'Sam John Reid';
   --color-primary: var(--color-orange);
-  --color-secondary: var(--color-blue); }
+  --color-secondary: var(--color-blue);
+  --font-poppins-bold: 'Poppins-Bold';
+  --font-poppins-light: 'Poppins-Light';
+  --font-poppins-semibold: 'Poppins-SemiBold'; }
 
 @font-face {
   font-family: 'Poppins-Bold';
@@ -70,17 +73,6 @@ table {
   src: url("../fonts/poppins-semibold.woff2") format("woff2"), url("../fonts/poppins-semibold.woff") format("woff");
   font-display: swap; }
 
-html {
-  font-size: 62.5%; }
-
-body {
-  background-image: linear-gradient(45deg, transparent 42.86%, 42.86%, #dde0e3 50%, transparent 50%, transparent 92.86%, #dde0e3 92.86%, #dde0e3 100%);
-  background-size: 9.90px 9.90px;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.6em;
-  height: 100dvh; }
-
 .header-wrapper {
   background-image: repeating-linear-gradient(270deg, #7c9fb5, #7c9fb5 6px, transparent 6px, transparent 10px, #7c9fb5 10px);
   background-size: 100% 2px;
@@ -93,6 +85,9 @@ body {
   background-size: 2px 100%, 2px 100%;
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: var(--content-width);
   padding: 50px; }
@@ -101,7 +96,52 @@ body {
     font-family: Poppins-Bold;
     font-size: 1.8rem; }
     .header__logo span {
-      font-family: Poppins-Light; }
+      font-family: var(--font-poppins-light); }
+  .header__nav-main {
+    display: flex;
+    column-gap: 10px;
+    font-family: var(--font-poppins-semibold); }
+  .header__nav-main-link a {
+    background: var(--color-blue-light);
+    color: var(--color-white);
+    display: inline-block;
+    padding: 10px 15px 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.5s; }
+    .header__nav-main-link a:hover {
+      background: var(--color-orange); }
+  .header__nav-main-link--active a {
+    background: var(--color-orange); }
+  .header__nav-aux-link--github svg {
+    color: var(--color-blue-light);
+    height: 50px;
+    width: 50px; }
+  .header__nav-aux-link--github:hover svg {
+    color: var(--color-orange); }
+  .header__nav-aux-link--linkedin svg {
+    color: var(--color-blue-light);
+    height: 50px;
+    width: 50px; }
+  .header__nav-aux-link--letterboxd ellipse {
+    fill: var(--color-orange); }
+  .header__nav-aux-link--email svg {
+    color: var(--color-blue-light);
+    height: 50px;
+    width: 50px; }
+  .header__nav-aux {
+    display: flex; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-image: linear-gradient(45deg, transparent 42.86%, 42.86%, #dde0e3 50%, transparent 50%, transparent 92.86%, #dde0e3 92.86%, #dde0e3 100%);
+  background-size: 9.90px 9.90px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6em;
+  height: 100dvh; }
 
 .main-wrapper {
   position: relative; }
@@ -117,36 +157,14 @@ body {
   padding: 50px 50px 650px;
   position: relative; }
 
-h2 {
-  font-size: clamp(2.6rem, calc(4vw + 1rem), 10rem);
-  font-family: Poppins-SemiBold; }
-  h2 span {
-    color: var(--color-primary);
-    font-family: Poppins-Bold; }
-
-.reid-family-illustration {
-  position: absolute;
-  right: 0;
-  top: -12rem; }
-
-.polaroid-wrapper {
-  transform: scale(0.8, 0.8) rotate(5deg); }
-
-.polaroid {
-  background: #fff;
-  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
-  padding: 1.5rem; }
-  .polaroid img {
-    max-width: 100%; }
-  .polaroid::before {
-    content: '';
-    bottom: 30px;
-    box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
-    height: 20%;
-    position: absolute;
-    right: 12px;
-    width: 47%;
-    z-index: -1; }
+.homepage-intro {
+  display: flex; }
+  .homepage-intro h2 {
+    font-family: var(--font-poppins-semibold);
+    font-size: 86px; }
+    .homepage-intro h2 span {
+      color: var(--color-primary);
+      font-family: var(--font-poppins-bold); }
 
 .city-skylines {
   bottom: 0;
