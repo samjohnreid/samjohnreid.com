@@ -52,50 +52,6 @@
 		}
 	}
 
-	&__nav-aux-link {
-
-		&--github {
-			
-			svg {
-				color: var(--color-blue-light);
-				height: 50px;
-				width: 50px;
-			}
-
-			&:hover {
-
-				svg {
-					color: var(--color-orange);
-				}
-			}
-		}
-
-		&--linkedin {
-			
-			svg {
-				color: var(--color-blue-light);
-				height: 50px;
-				width: 50px;
-			}
-		}
-		
-		&--letterboxd {
-
-			ellipse {
-				fill: var(--color-orange);
-			}
-		}
-
-		&--email {
-			
-			svg {
-				color: var(--color-blue-light);
-				height: 50px;
-				width: 50px;
-			}
-		}
-	}
-
 	&__nav-aux {
 		display: flex;
 	}

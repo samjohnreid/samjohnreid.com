@@ -113,22 +113,6 @@ table {
       background: var(--color-orange); }
   .header__nav-main-link--active a {
     background: var(--color-orange); }
-  .header__nav-aux-link--github svg {
-    color: var(--color-blue-light);
-    height: 50px;
-    width: 50px; }
-  .header__nav-aux-link--github:hover svg {
-    color: var(--color-orange); }
-  .header__nav-aux-link--linkedin svg {
-    color: var(--color-blue-light);
-    height: 50px;
-    width: 50px; }
-  .header__nav-aux-link--letterboxd ellipse {
-    fill: var(--color-orange); }
-  .header__nav-aux-link--email svg {
-    color: var(--color-blue-light);
-    height: 50px;
-    width: 50px; }
   .header__nav-aux {
     display: flex; }
 
