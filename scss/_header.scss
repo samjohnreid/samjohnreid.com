@@ -10,49 +10,135 @@
 	justify-content: space-between;
 	margin: 0 auto;
     max-width: var(--content-width);
-    padding: 50px;
+    padding: 30px 50px;
 
     &__logo {
-        color: var(--color-primary);
-        font-family: Poppins-Bold;
-        font-size: 1.8rem;
+		position: relative;
+		top: 3px;
 
-        span {
-            font-family: var(--font-poppins-light);
-        }
+		a {
+			text-decoration: none;
+			color: var(--color-primary);
+			font-family: Poppins-Bold;
+			font-size: 1.8rem;
+			transition: color 0.25s;
+
+			span {
+				font-family: var(--font-poppins-light);
+			}
+		}
+
+		a:hover {
+			color: var(--color-blue);
+		}
     }
 
 	&__nav-main {
 		display: flex;
 		column-gap: 10px;
-		font-family: var(--font-poppins-semibold);
 	}
 
 	&__nav-main-link {
 
 		a {
-			background: var(--color-blue-light);
+			background: var(--color-blue);
+			border-radius: 16px;
 			color: var(--color-white);
 			display: inline-block;
+			font-family: var(--font-poppins-semibold);
 			padding: 10px 15px 6px;
 			text-decoration: none;
-			text-transform: uppercase;
-			transition: background 0.5s;
+			transition: background 0.25s;
 
 			&:hover {
-				background: var(--color-orange);
+				background: var(--color-primary);
 			}
 		}
 
 		&--active {
 
 			a {
-				background: var(--color-orange);
+				background: var(--color-primary);
 			}
 		}
 	}
 
 	&__nav-aux {
 		display: flex;
+		column-gap: 10px;
+	}
+
+	&__nav-aux-link {
+
+		a {
+			background-repeat: no-repeat;
+			background-size: contain;
+			display: block;
+			height: 22px;
+			position: relative;
+			width: 22px;
+
+			&::after {
+				background-repeat: no-repeat;
+				background-size: contain;
+				content: '';
+				display: block;
+				height: 22px;
+				left: 0;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				transition: opacity 0.25s;
+				width: 22px;
+			}
+
+			&:hover {
+
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			span {
+				font-size: 0;
+				visibility: hidden;
+			}
+		}
+
+		&--github a {
+			background-image: url(/images/icons/icon-github-64-orange.png);
+
+			&::after {
+				background-image: url(/images/icons/icon-github-64-blue.png);
+			}
+		}
+
+		&--linkedin a {
+			background-image: url(/images/icons/icon-linkedin-64-orange.png);
+
+			&::after {
+				background-image: url(/images/icons/icon-linkedin-64-blue.png);
+			}
+		}
+
+		&--letterboxd a {
+			background-image: url(/images/icons/icon-letterboxd-64-orange.png);
+			width: 59px;
+
+			&::after {
+				background-image: url(/images/icons/icon-letterboxd-64-color.png);
+				width: 59px;
+			}
+		}
+
+		&--email a {
+			background-image: url(/images/icons/icon-email-64-orange.png);
+			width: 30px;
+
+			&::after {
+				background-image: url(/images/icons/icon-email-64-blue.png);
+				width: 30px;
+			}
+		}
 	}
 }
